@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.wrapper {
+  width: 1000px;
+  outline: 5px solid green;
+  height: 90vh;
+}
+
+.enemiesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 5px; */
+}
+
+.enemy {
+  outline: 1px solid black;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.player {
+  position: absolute;
+  bottom: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: 0.2s ease;
+}
