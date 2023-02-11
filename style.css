@@ -20,7 +20,6 @@ body {
 .enemiesWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   /* gap: 5px; */
 }
 
@@ -29,6 +28,7 @@ body {
   width: 100px;
   height: 100px;
   background-color: red;
+  animation: spawningAnimation 1s 1;
 }
 
 .player {
@@ -37,5 +37,14 @@ body {
   width: 100px;
   height: 100px;
   background-color: blue;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
+}
+
+@keyframes spawningAnimation {
+  from {
+    translate: 0 -100%;
+  }
+  to {
+    translate: 0 0;
+  }
 }
