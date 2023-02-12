@@ -18,8 +18,12 @@
   outline: 0.1rem solid black;
   width: 10rem;
   height: 10rem;
-  background-color: red;
+  /* background-color: red; */
   animation: spawningAnimation 1s 1;
+  background-image: url('../assets/ufo.png');
+  /* image link ^ */
+  /* https://art.pixilart.com/286c134d186f9f0.png */
+  background-size: contain;
 }
 
 .player {
@@ -27,9 +31,13 @@
   bottom: 5rem;
   width: 10rem;
   height: 10rem;
-  background-color: blue;
+  /* background-color: blue; */
   transition: 0.1s ease, opacity 1s ease;
   z-index: 5;
+  background-image: url('../assets/spaceship.png');
+  /* image link ^ */
+  /* https://preview.redd.it/yct20hubfk061.png?auto=webp&s=32226b397578b664ed794b64938ce40adf3298fe */
+  background-size: contain;
 }
 
 .czarnojan {
