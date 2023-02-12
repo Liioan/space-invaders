@@ -1,6 +1,14 @@
+import { finishGame } from '../script.js';
 const gameWrapper = document.querySelector('.game-wrapper');
 
 let interval;
+
+const checkForWin = () => {
+  const enemies = document.querySelectorAll('.enemy');
+  if (enemies.length === 0) {
+    finishGame('win');
+  }
+};
 
 const checkForContact = bullet => {
   let bulletCoords = bullet.getBoundingClientRect();
@@ -15,6 +23,7 @@ const checkForContact = bullet => {
       console.log('contact');
       bullet.remove();
       enemy.remove();
+      checkForWin();
     }
   });
 };

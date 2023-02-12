@@ -2,6 +2,7 @@
 
 @import url('./css/game.css');
 @import url('./css/gameStart.css');
+@import url('./css/gameFinish.css');
 
 * {
   margin: 0;
