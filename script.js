@@ -3,20 +3,21 @@ import spawnEnemies from './js/spawnEnemies.js';
 import shoot from './js/shootingPlayer.js';
 import enemyShoot from './js/shootingEnemy.js';
 import showFinalScreen from './js/showFinalScreen.js';
-// import checkForPytel from './js/pytelMode.js';
+import moveEnemies from './js/movingEnemies.js';
 
 let selectedGameMode;
 let isGameFinished = false;
+let enemyShootingInterval;
+let movingInterval;
 
 const gamemodeBtns = document.querySelectorAll('.gamemode-btn');
 const startGameScreen = document.querySelector('.start-game');
-
-let enemyShootingInterval;
 
 export const finishGame = state => {
   showFinalScreen(state);
 
   clearInterval(enemyShootingInterval);
+  clearInterval(movingInterval);
   window.removeEventListener('keydown', e => {
     handleKeyDown(e);
   });
@@ -80,6 +81,13 @@ const startGame = () => {
       enemyShoot();
     },
     shootingFrequency ? shootingFrequency : 2000
+  );
+
+  movingInterval = setInterval(
+    () => {
+      moveEnemies();
+    },
+    selectedGameMode === 'pytel' ? 31000 : 10000
   );
 
   //- spawning enemies and player, show hidden elements

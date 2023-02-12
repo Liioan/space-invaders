@@ -3,10 +3,12 @@
 .game-wrapper {
   width: 100rem;
   height: 90vh;
-  outline: 4px solid #88888846;
+  border: 4px solid #88888846;
+  border-bottom: 4px solid #0a580a;
 }
 
-.enemiesWrapper {
+.enemies-wrapper {
+  position: absolute;
   display: grid;
   grid-template-columns: repeat(10, 10rem);
   grid-template-rows: auto;

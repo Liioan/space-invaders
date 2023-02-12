@@ -1,7 +1,7 @@
 import { finishGame } from '../script.js';
 
 const heartsWrapper = document.querySelector('.hearts');
-let playerHealth = 5;
+let playerHealth = 3;
 
 export const reduceHealth = () => {
   heartsWrapper.innerHTML = '';

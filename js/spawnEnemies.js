@@ -1,4 +1,4 @@
-const enemiesWrapper = document.querySelector('.enemiesWrapper');
+const enemiesWrapper = document.querySelector('.enemies-wrapper');
 const player = document.querySelector('.player');
 
 const checkForPytel = selectedMode => {
