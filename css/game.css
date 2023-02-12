@@ -16,7 +16,7 @@
   width: 10rem;
   height: 10rem;
   background-color: red;
-  /* animation: spawningAnimation 1s 1; */
+  animation: spawningAnimation 1s 1;
 }
 
 .player {
@@ -58,7 +58,7 @@
 }
 
 .cooldown-active {
-  animation: cooldownAnimation 1.5s 1;
+  animation: cooldownAnimation 1.5s 1 linear;
 }
 
 @keyframes cooldownAnimation {

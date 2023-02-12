@@ -12,7 +12,7 @@ const spawnEnemies = (gameMode = 'easy') => {
           newEnemy.style.gridColumn = `${j}/${j + 1}`;
           newEnemy.style.gridRow = `${i}/${i + 1}`;
           enemiesWrapper.appendChild(newEnemy);
-        }, 100 * i);
+        }, 100 * j * i);
       }
     }
   };
