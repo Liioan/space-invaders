@@ -30,3 +30,23 @@ body {
 .hidden {
   opacity: 0;
 }
+
+.overlay {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+  }
+}
