@@ -2,25 +2,36 @@ const enemiesWrapper = document.querySelector('.enemiesWrapper');
 
 const spawnEnemies = (gameMode = 'easy') => {
   const spawn = amount => {
-    for (let i = 0; i < amount; i++) {
-      setTimeout(() => {
-        enemiesWrapper.innerHTML += `<div class='enemy'/>`;
-      }, 100 * i);
+    for (let i = 1; i <= amount; i++) {
+      for (let j = 1; j <= 10; j++) {
+        setTimeout(() => {
+          // enemiesWrapper.innerHTML += `<div class='enemy' id='${i}'></div>`;
+          const newEnemy = document.createElement('div');
+          newEnemy.classList.add('enemy');
+          newEnemy.id = `e${Math.floor(Math.random() * 1000)}`;
+          newEnemy.style.gridColumn = `${j}/${j + 1}`;
+          newEnemy.style.gridRow = `${i}/${i + 1}`;
+          enemiesWrapper.appendChild(newEnemy);
+        }, 100 * i);
+      }
     }
   };
 
   switch (gameMode) {
     case 'easy':
-      spawn(20);
+      spawn(2);
       return;
     case 'medium':
-      spawn(30);
+      spawn(3);
       return;
     case 'hard':
-      spawn(40);
+      spawn(4);
       return;
     case 'pytel':
-      spawn(50);
+      spawn(5);
+      return;
+    case 'development':
+      spawn(1);
       return;
   }
 };

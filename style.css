@@ -1,50 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@import url('./css/game.css');
+@import url('./css/gameStart.css');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Press Start 2P', cursive;
 }
 
 body {
   background-color: black;
-  display: grid;
+  /* display: grid;
   justify-items: center;
-  /* display: flex;
-  justify-content: center; */
-}
-
-.wrapper {
-  width: 1000px;
-  outline: 5px solid green;
-  height: 90vh;
-}
-
-.enemiesWrapper {
+  align-content: center; */
   display: flex;
-  flex-wrap: wrap;
-  /* gap: 5px; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.enemy {
-  outline: 1px solid black;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation: spawningAnimation 1s 1;
+html,
+body {
+  font-size: 10px;
+  overflow: hidden;
 }
 
-.player {
-  position: absolute;
-  bottom: 100px;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  transition: 0.1s ease;
-}
-
-@keyframes spawningAnimation {
-  from {
-    translate: 0 -100%;
-  }
-  to {
-    translate: 0 0;
-  }
+.hidden {
+  opacity: 0;
 }

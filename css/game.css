@@ -1,0 +1,124 @@
+/* . game wrapper */
+
+.game-wrapper {
+  width: 100rem;
+  height: 90vh;
+}
+
+.enemiesWrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 10rem);
+  grid-template-rows: auto;
+}
+
+.enemy {
+  outline: 0.1rem solid black;
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+  /* animation: spawningAnimation 1s 1; */
+}
+
+.player {
+  position: absolute;
+  bottom: 10rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: blue;
+  transition: 0.1s ease, opacity 1s ease;
+  z-index: 5;
+}
+
+@keyframes spawningAnimation {
+  from {
+    translate: 0 -100%;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+/* . shooting cooldown */
+
+.shooting-cooldown-wrapper {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.2s ease;
+  gap: 2rem;
+}
+
+.shooting-cooldown {
+  height: 1rem;
+  background-color: white;
+}
+
+.cooldown-active {
+  animation: cooldownAnimation 1.5s 1;
+}
+
+@keyframes cooldownAnimation {
+  from {
+    width: 50rem;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* . bullet */
+
+.bullet {
+  position: absolute;
+  bottom: 10rem;
+  width: 0.5rem;
+  height: 5rem;
+  background-color: white;
+  transition: 0.1s ease;
+  z-index: -10;
+  animation: bulletTravel 1s 1 linear;
+}
+
+@keyframes bulletTravel {
+  0% {
+    bottom: 0%;
+    opacity: 0;
+  }
+  10% {
+    bottom: 10%;
+    opacity: 0;
+  }
+  20% {
+    bottom: 20%;
+    opacity: 1;
+  }
+  30% {
+    bottom: 30%;
+  }
+  40% {
+    bottom: 40%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  60% {
+    bottom: 60%;
+  }
+  70% {
+    bottom: 70%;
+  }
+  80% {
+    bottom: 80%;
+  }
+  90% {
+    bottom: 90%;
+    /* opacity: 0; */
+  }
+  100% {
+    bottom: 100%;
+  }
+}

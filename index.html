@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="enemiesWrapper"></div>
-
-      <div class="player"></div>
+    <div class="start-game">
+      <h1>space invaders</h1>
+      <div class="gamemode-list">
+        <button class="gamemode-btn" id="easy">easy</button>
+        <button class="gamemode-btn" id="medium">medium</button>
+        <button class="gamemode-btn" id="hard">hard</button>
+      </div>
     </div>
+    <div class="game-wrapper hidden">
+      <div class="enemiesWrapper"></div>
+      <div class="player hidden"></div>
+    </div>
+    <div class="shooting-cooldown-wrapper hidden">
+      shooting cooldown:
+      <span class="shooting-cooldown"></span>
+    </div>
+    <button class="gamemode-btn" id="pytel"></button>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
