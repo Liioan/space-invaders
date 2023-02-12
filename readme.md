@@ -1,5 +1,7 @@
 # space invaders
 
+you can play the game [here](https://lorem-spaceinvaders.netlify.app/)
+
 ## controlls
 
 ```
