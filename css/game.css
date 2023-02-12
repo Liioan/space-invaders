@@ -90,7 +90,7 @@
   background-color: white;
   transition: 0.1s ease;
   z-index: 10;
-  animation: enemyBulletTravel 1s 1 linear;
+  animation: enemyBulletTravel 0.5s 1 linear;
 }
 
 @keyframes bulletTravel {

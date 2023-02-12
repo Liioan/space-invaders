@@ -34,11 +34,11 @@ const enemyShoot = () => {
   gameWrapper.appendChild(enemyBullet);
   interval = setInterval(() => {
     checkForContact(enemyBullet);
-  }, 100);
+  }, 50);
   setTimeout(() => {
     clearInterval(interval);
     enemyBullet.remove();
-  }, 1000);
+  }, 500);
 };
 
 export default enemyShoot;

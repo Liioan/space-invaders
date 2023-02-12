@@ -29,7 +29,9 @@ const startGame = () => {
     if (isGameFinished) return;
     if (isMoving) return;
     movePlayer(e.code);
-    isMoving = true;
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') {
+      isMoving = true;
+    }
     setTimeout(() => {
       isMoving = false;
     }, 210);
