@@ -58,11 +58,11 @@ const startGame = () => {
       case 'easy':
         return 3000;
       case 'medium':
-        return 2500;
-      case 'hard':
-        return 2000;
-      case 'pytel':
         return 1500;
+      case 'hard':
+        return 1000;
+      case 'pytel':
+        return 1000;
     }
   })();
   enemyShootingInterval = setInterval(
