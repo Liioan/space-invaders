@@ -1,6 +1,7 @@
 import movePlayer from './js/movingPlayer.js';
 import spawnEnemies from './js/spawnEnemies.js';
 import shoot from './js/shootingPlayer.js';
+import enemyShoot from './js/shootingEnemy.js';
 
 let selectedGameMode;
 
@@ -36,6 +37,26 @@ const startGame = () => {
     }, 1500);
   });
 
+  //- shooting system (enemies)
+  const shootingFrequency = (() => {
+    switch (selectedGameMode) {
+      case 'easy':
+        return 3000;
+      case 'medium':
+        return 2500;
+      case 'hard':
+        return 2000;
+      case 'pytel':
+        return 1500;
+    }
+  })();
+  setInterval(
+    () => {
+      enemyShoot();
+    },
+    shootingFrequency ? shootingFrequency : 2000
+  );
+
   //- spawning enemies and player, show hidden elements
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach(element => {
@@ -54,4 +75,4 @@ gamemodeBtns.forEach(btn => {
   });
 });
 
-// startGame();
+startGame();

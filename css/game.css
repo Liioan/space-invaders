@@ -83,6 +83,16 @@
   animation: bulletTravel 1s 1 linear;
 }
 
+.enemy-bullet {
+  position: absolute;
+  width: 0.5rem;
+  height: 5rem;
+  background-color: white;
+  transition: 0.1s ease;
+  z-index: 10;
+  animation: enemyBulletTravel 1s 1 linear;
+}
+
 @keyframes bulletTravel {
   0% {
     bottom: 0%;
@@ -121,4 +131,56 @@
   100% {
     bottom: 100%;
   }
+}
+
+@keyframes enemyBulletTravel {
+  0% {
+    bottom: 100%;
+    opacity: 0;
+  }
+  10% {
+    bottom: 90%;
+    opacity: 0;
+  }
+  20% {
+    bottom: 80%;
+    opacity: 1;
+  }
+  30% {
+    bottom: 70%;
+  }
+  40% {
+    bottom: 60%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  60% {
+    bottom: 40%;
+  }
+  70% {
+    bottom: 30%;
+  }
+  80% {
+    bottom: 20%;
+  }
+  90% {
+    bottom: 10%;
+    /* opacity: 0; */
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+/* . health */
+
+.hearts {
+  position: absolute;
+  top: 0;
+}
+
+.hearts img {
+  filter: invert(1);
+  width: 5rem;
 }
