@@ -1,5 +1,5 @@
 const heartsWrapper = document.querySelector('.hearts');
-let playerHealth = 3;
+let playerHealth = 5;
 
 export const reduceHealth = () => {
   heartsWrapper.innerHTML = '';
