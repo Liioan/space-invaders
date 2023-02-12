@@ -3,6 +3,7 @@
 .game-wrapper {
   width: 100rem;
   height: 90vh;
+  outline: 4px solid #88888846;
 }
 
 .enemiesWrapper {
@@ -21,12 +22,22 @@
 
 .player {
   position: absolute;
-  bottom: 10rem;
+  bottom: 5rem;
   width: 10rem;
   height: 10rem;
   background-color: blue;
   transition: 0.1s ease, opacity 1s ease;
   z-index: 5;
+}
+
+.czarnojan {
+  background: url('../assets/czarnojan.png');
+  background-size: cover;
+}
+
+.pytel {
+  background: url('../assets/pytlowo.png');
+  background-size: cover;
 }
 
 @keyframes spawningAnimation {
@@ -42,7 +53,7 @@
 
 .shooting-cooldown-wrapper {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,6 +72,10 @@
   animation: cooldownAnimation 1.5s 1 linear;
 }
 
+.pytel-cooldown {
+  animation: cooldownAnimation 3s 1 linear;
+}
+
 @keyframes cooldownAnimation {
   from {
     width: 50rem;
@@ -77,7 +92,7 @@
   bottom: 10rem;
   width: 0.5rem;
   height: 5rem;
-  background-color: white;
+  background-color: rgb(0, 4, 255);
   transition: 0.1s ease;
   z-index: -10;
   animation: bulletTravel 1s 1 linear;
@@ -87,7 +102,7 @@
   position: absolute;
   width: 0.5rem;
   height: 5rem;
-  background-color: white;
+  background-color: rgb(255, 0, 0);
   transition: 0.1s ease;
   z-index: 10;
   animation: enemyBulletTravel 0.5s 1 linear;

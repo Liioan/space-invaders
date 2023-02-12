@@ -3,6 +3,7 @@ import spawnEnemies from './js/spawnEnemies.js';
 import shoot from './js/shootingPlayer.js';
 import enemyShoot from './js/shootingEnemy.js';
 import showFinalScreen from './js/showFinalScreen.js';
+// import checkForPytel from './js/pytelMode.js';
 
 let selectedGameMode;
 let isGameFinished = false;
@@ -40,11 +41,17 @@ const startGame = () => {
     if (shootingCooldown) return;
     shoot();
     shootingCooldown = true;
-    cooldownMeter.classList.add('cooldown-active');
-    setTimeout(() => {
-      shootingCooldown = false;
-      cooldownMeter.classList.remove('cooldown-active');
-    }, 1500);
+    selectedGameMode === 'pytel'
+      ? cooldownMeter.classList.add('pytel-cooldown')
+      : cooldownMeter.classList.add('cooldown-active');
+    setTimeout(
+      () => {
+        shootingCooldown = false;
+        cooldownMeter.classList.remove('pytel-cooldown');
+        cooldownMeter.classList.remove('cooldown-active');
+      },
+      selectedGameMode === 'pytel' ? 3000 : 1500
+    );
   };
 
   window.addEventListener('keydown', e => {
@@ -83,6 +90,8 @@ const startGame = () => {
   spawnEnemies(selectedGameMode);
   gamemodeBtns[3].remove();
   startGameScreen.remove();
+
+  // checkForPytel(selectedGameMode);
 };
 
 gamemodeBtns.forEach(btn => {
