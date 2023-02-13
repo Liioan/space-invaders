@@ -87,7 +87,7 @@ const startGame = () => {
     () => {
       moveEnemies();
     },
-    selectedGameMode === 'pytel' ? 31000 : 10000
+    selectedGameMode === 'pytel' ? 31000 : 16000
   );
 
   //- spawning enemies and player, show hidden elements
