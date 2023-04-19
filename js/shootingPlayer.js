@@ -1,4 +1,5 @@
 import { finishGame } from '../script.js';
+import { addToScore } from './score.js';
 const gameWrapper = document.querySelector('.game-wrapper');
 
 let interval;
@@ -20,8 +21,8 @@ const checkForContact = bullet => {
       bulletCoords.left >= enemyCoords.left &&
       bulletCoords.right <= enemyCoords.right
     ) {
-      console.log('contact');
       bullet.remove();
+      addToScore();
       enemy.remove();
       checkForWin();
     }

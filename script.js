@@ -4,6 +4,7 @@ import shoot from './js/shootingPlayer.js';
 import enemyShoot from './js/shootingEnemy.js';
 import showFinalScreen from './js/showFinalScreen.js';
 import moveEnemies from './js/movingEnemies.js';
+import { getGameMode } from './js/score.js';
 
 let selectedGameMode;
 let isGameFinished = false;
@@ -25,6 +26,8 @@ export const finishGame = state => {
 
 //- starting game
 const startGame = () => {
+  getGameMode(selectedGameMode);
+
   //- moving system and shooting system (player)
   let isMoving = false;
   const handleKeyDown = e => {
@@ -72,6 +75,8 @@ const startGame = () => {
       case 'hard':
         return 1000;
       case 'pytel':
+        return 1000;
+      default:
         return 1000;
     }
   })();

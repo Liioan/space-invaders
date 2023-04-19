@@ -1,3 +1,5 @@
+import { showScore } from './score.js';
+
 const elementsToDelete = Array.from(document.body.children);
 
 const showFinalScreen = state => {
@@ -17,10 +19,12 @@ const showFinalScreen = state => {
   finalScreen.classList.add('final-screen');
   const title = document.createElement('h2');
   title.textContent = playerWon ? 'You won!' : 'You lost!';
+  const scoreText = document.createElement('p');
+  scoreText.textContent = `Your score: ${showScore()}`;
   const subtitle = document.createElement('p');
   subtitle.textContent = playerWon
-    ? 'congratulation!'
-    : 'better luck next time!';
+    ? 'Congratulation!'
+    : 'Better luck next time!';
   const button = document.createElement('button');
   button.textContent = 'restart';
   button.classList.add('restart');
@@ -29,6 +33,7 @@ const showFinalScreen = state => {
   });
 
   finalScreen.appendChild(title);
+  finalScreen.appendChild(scoreText);
   finalScreen.appendChild(subtitle);
   finalScreen.appendChild(button);
 
