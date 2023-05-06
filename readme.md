@@ -13,7 +13,6 @@ you can play the game [here](https://lorem-spaceinvaders.netlify.app/)
 ## mechanics
 
 - you can shoot every 1.5 seconds, so be carefull with where you aim
-- you can move every 200 milliseconds
 - enemies are constantly going lower, if they reach the bottom, you will loose, so be quick
 - enemy shooting rate depends on game mode you selected
 

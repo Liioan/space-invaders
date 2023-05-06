@@ -1,14 +1,22 @@
 /* . game wrapper */
 
 .game-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100rem;
   height: 90vh;
   border: 4px solid #88888846;
   border-bottom: 4px solid #0a580a;
 }
 
+.player-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 10rem);
+  grid-template-rows: 10rem;
+}
+
 .enemies-wrapper {
-  position: absolute;
   display: grid;
   grid-template-columns: repeat(10, 10rem);
   grid-template-rows: auto;
@@ -27,8 +35,9 @@
 }
 
 .player {
-  position: absolute;
-  bottom: 5rem;
+  transition: 0.2s ease;
+  /* position: absolute; */
+  /* bottom: 5rem; */
   width: 10rem;
   height: 10rem;
   /* background-color: blue; */

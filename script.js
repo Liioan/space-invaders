@@ -32,14 +32,14 @@ const startGame = () => {
   let isMoving = false;
   const handleKeyDown = e => {
     if (isGameFinished) return;
-    if (isMoving) return;
+    // if (isMoving) return;
     movePlayer(e.code);
     if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') {
       isMoving = true;
     }
-    setTimeout(() => {
-      isMoving = false;
-    }, 210);
+    // setTimeout(() => {
+    //   isMoving = false;
+    // }, 210);
 
     if (!(e.code === 'ArrowUp')) return;
     if (shootingCooldown) return;
@@ -90,7 +90,7 @@ const startGame = () => {
 
   movingInterval = setInterval(
     () => {
-      moveEnemies();
+      // moveEnemies();
     },
     selectedGameMode === 'pytel' ? 31000 : 16000
   );
