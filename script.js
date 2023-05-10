@@ -90,7 +90,7 @@ const startGame = () => {
 
   movingInterval = setInterval(
     () => {
-      // moveEnemies();
+       moveEnemies();
     },
     selectedGameMode === 'pytel' ? 31000 : 16000
   );
